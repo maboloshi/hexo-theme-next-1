@@ -395,15 +395,15 @@ font:
 
 # Math Equations Render Support
 math:
-  enable: false
+  enable: true
 
   # Default(true) will load mathjax/katex script on demand
   # That is it only render those page who has 'mathjax: true' in Front Matter.
   # If you set it to false, it will load mathjax/katex srcipt EVERY PAGE.
   per_page: true
 
-  engine: mathjax
-  #engine: katex
+  #engine: mathjax
+  engine: katex
 
   # hexo-rendering-pandoc (or hexo-renderer-kramed) needed to full MathJax support.
   mathjax:
@@ -420,7 +420,7 @@ math:
   # needed to full Katex support.
   katex:
     # Use 0.7.1 as default, jsdelivr as default CDN, works everywhere even in China
-    cdn: //cdn.jsdelivr.net/npm/katex@0.7.1/dist/katex.min.css
+    cdn: //cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.css
     # CDNJS, provided by cloudflare, maybe the best CDN, but not works in China
     #cdn: //cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css
     # Bootcss, works great in China, but not so well in other region
@@ -443,10 +443,10 @@ pangu: false
 
 # Disqus
 disqus:
-  enable: false
-  shortname:
+  enable: true
+  shortname: maboloshi-github
   count: true
-  lazyload: false
+  lazyload: true
 
 # Hypercomments
 #hypercomments_id:
@@ -767,7 +767,7 @@ motion:
 # Please, choose only any one variant, do not need to install both.
 # For install 2.x: https://github.com/theme-next/theme-next-fancybox
 # For install 3.x: https://github.com/theme-next/theme-next-fancybox3
-fancybox: false
+fancybox: true
 
 # Added switch option for separated repo in 6.0.0.
 # Dependencies: https://github.com/theme-next/theme-next-fastclick
@@ -775,7 +775,7 @@ fastclick: false
 
 # Added switch option for separated repo in 6.0.0.
 # Dependencies: https://github.com/theme-next/theme-next-jquery-lazyload
-lazyload: false
+lazyload: true
 
 # Progress bar in the top during page loading.
 # Dependencies: https://github.com/theme-next/theme-next-pace
@@ -800,7 +800,7 @@ pace_theme: pace-theme-minimal
 
 # Canvas-nest
 # Dependencies: https://github.com/theme-next/theme-next-canvas-nest
-canvas_nest: false
+canvas_nest: true
 
 # JavaScript 3D library.
 # Dependencies: https://github.com/theme-next/theme-next-three
