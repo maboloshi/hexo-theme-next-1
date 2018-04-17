@@ -75,8 +75,7 @@
           <span class="post-time">
 
             {% set date_diff = date(post.date) != date(post.updated) %}
-            {% set time_diff = time(post.date) != time(post.updated) %}
-            {% set datetime_diff = date_diff or time_diff %}
+            {% set datetime_diff = full_date(post.date) != full_date(post.updated) %}
 
             {% if theme.post_meta.created_at %}
               <span class="post-meta-item-icon">
@@ -86,8 +85,8 @@
                 <span class="post-meta-item-text">{{ __('post.posted') }}</span>
               {% endif %}
 
-              {% if !date_diff && time_diff && theme.post_meta.updated_at %}
-                {% set create_title = __('post.created') + ' ' + full_date(post.date) + ' / ' + __('post.modified') + ' ' + time(post.updated) %}
+              {% if !date_diff && theme.post_meta.updated_at %}
+                {% set create_title = __('post.created') + ' ' + full_date(post.date) + '/' + __('post.modified') + ' ' + full_date(post.updated) %}
               {% else %}
                 {% set create_title = full_date(post.date) %}
               {% endif %}
